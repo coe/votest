@@ -106,10 +106,16 @@ class ShopCollectionCollectionViewController: UICollectionViewController,NSFetch
         // self.clearsSelectionOnViewWillAppear = false
 
         // Do any additional setup after loading the view.
-        let urlstring = "https://app.rakuten.co.jp/services/api/IchibaItem/Search/20170706?applicationId=1088734228559323144&keyword=%E7%A6%8F%E8%A2%8B&sort=%2BitemPrice"
-        let url = URL(string: urlstring)
+        var component = URLComponents()
+        component.scheme = "https"
+        component.host = "app.rakuten.co.jp"
+        component.path = "/services/api/IchibaItem/Search/20170706"
+        component.queryItems = [
+            URLQueryItem(name: "applicationId", value: "1088734228559323144"),
+            URLQueryItem(name: "genreId", value: "216131"),
+        ]
         let appDelegate:AppDelegate! = UIApplication.shared.delegate as! AppDelegate
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: component.url!) { (data, response, error) in
             do {
                 let items = try JSONDecoder().decode(RakutenResult.self, from: data!)
                 print(items)
@@ -120,7 +126,7 @@ class ShopCollectionCollectionViewController: UICollectionViewController,NSFetch
                 items.Items.forEach({ (rItem) in
                     let data = ShopItem(entity: entityDescription, insertInto: appDelegate.persistentContainer.viewContext)
                     data.title = rItem.Item.itemName
-                    data.imageUrl = rItem.Item.mediumImageUrls.first!.imageUrl
+                    data.imageUrl = rItem.Item.mediumImageUrls.first?.imageUrl
                     
                 })
                 appDelegate.saveContext()
@@ -166,7 +172,11 @@ class ShopCollectionCollectionViewController: UICollectionViewController,NSFetch
 
         // Configure the cell
         let url = URL(string: data.imageUrl!)
+//        cell.isAccessibilityElement = true
+//        cell.accessibilityLabel = data.title
+        cell.imageView.isAccessibilityElement = true
         cell.imageView.image = nil
+        cell.imageView.accessibilityTraits = UIAccessibilityTraitImage
         let task = URLSession.shared.dataTask(with: url!) { (data, resp, err) in
             DispatchQueue.main.async {
                 cell.imageView.image = UIImage(data: data!)
