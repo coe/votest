@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import SDWebImage
+//import SDWebImage
 
 private let reuseIdentifier = "reuseIdentifier"
 
@@ -166,12 +166,21 @@ class ShopCollectionCollectionViewController: UICollectionViewController,NSFetch
 
         // Configure the cell
         let url = URL(string: data.imageUrl!)
-        cell.imageView.sd_setImage(with: url, completed: nil)
+        cell.imageView.image = nil
+        let task = URLSession.shared.dataTask(with: url!) { (data, resp, err) in
+            DispatchQueue.main.async {
+                cell.imageView.image = UIImage(data: data!)
+            }
+        }
+        task.resume()
     
         return cell
     }
 
     // MARK: UICollectionViewDelegate
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("\(Date())")
+    }
 
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
