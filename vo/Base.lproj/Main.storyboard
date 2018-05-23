@@ -35,8 +35,8 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NXf-Xq-quN">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <accessibility key="accessibilityConfiguration">
-                                                <accessibilityTraits key="traits" image="YES"/>
-                                                <bool key="isElement" value="YES"/>
+                                                <accessibilityTraits key="traits" none="YES"/>
+                                                <bool key="isElement" value="NO"/>
                                             </accessibility>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="128" id="AGz-hh-KCR"/>

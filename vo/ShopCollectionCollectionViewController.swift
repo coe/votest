@@ -171,18 +171,24 @@ class ShopCollectionCollectionViewController: UICollectionViewController,NSFetch
         let data = fetchedResultsController.object(at: indexPath)
 
         // Configure the cell
-        let url = URL(string: data.imageUrl!)
-//        cell.isAccessibilityElement = true
-//        cell.accessibilityLabel = data.title
-        cell.imageView.isAccessibilityElement = true
-        cell.imageView.image = nil
-        cell.imageView.accessibilityTraits = UIAccessibilityTraitImage
-        let task = URLSession.shared.dataTask(with: url!) { (data, resp, err) in
-            DispatchQueue.main.async {
-                cell.imageView.image = UIImage(data: data!)
+        if let str = data.imageUrl,let url = URL(string: str) {
+            
+            //        cell.isAccessibilityElement = true
+            
+            cell.imageView.accessibilityLabel = data.title
+            
+            cell.imageView.isAccessibilityElement = true
+            cell.imageView.image = nil
+            
+            cell.imageView.accessibilityTraits = UIAccessibilityTraitImage
+            let task = URLSession.shared.dataTask(with: url) { (data, resp, err) in
+                DispatchQueue.main.async {
+                    cell.imageView.image = UIImage(data: data!)
+                }
             }
+            task.resume()
         }
-        task.resume()
+
     
         return cell
     }
