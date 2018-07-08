@@ -146,6 +146,7 @@
                     <connections>
                         <outlet property="buyButtom" destination="43W-5e-p5X" id="upK-nM-oGq"/>
                         <outlet property="imageView" destination="UgD-6l-czz" id="U7F-Ud-DHd"/>
+                        <outlet property="kaeruLabel" destination="E5H-5r-FeF" id="m21-wZ-9Oe"/>
                         <outlet property="shopItemLabel" destination="QZK-O6-JlM" id="Zaq-1L-Q2S"/>
                     </connections>
                 </viewController>

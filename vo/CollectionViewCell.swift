@@ -22,14 +22,15 @@ class CollectionViewCell: UICollectionViewCell {
                 
                 self.imageView.isAccessibilityElement = true
                 self.imageView.image = nil
+                self.imageView.backgroundColor = UIColor.gray
                 
                 self.imageView.accessibilityTraits = UIAccessibilityTraitImage
-                let task = URLSession.shared.dataTask(with: url) { (data, resp, err) in
-                    DispatchQueue.main.async {
-                        self.imageView.image = UIImage(data: data!)
-                    }
-                }
-                task.resume()
+//                let task = URLSession.shared.dataTask(with: url) { (data, resp, err) in
+//                    DispatchQueue.main.async {
+//                        self.imageView.image = UIImage(data: data!)
+//                    }
+//                }
+//                task.resume()
             }
         }
         get {

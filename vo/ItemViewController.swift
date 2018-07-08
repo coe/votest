@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ItemViewController: UIViewController {
 
@@ -14,6 +15,7 @@ class ItemViewController: UIViewController {
     @IBOutlet weak var buyButtom: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var kaeruLabel: UILabel!
     @IBOutlet weak var iineButton: UIButton!
     
     var data:ShopItem!
@@ -21,6 +23,16 @@ class ItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.shopItemLabel.text = data.title
+//        let attributedString = NSMutableAttributedString(string: "Hello iPhone")
+        
+        let key = NSAttributedStringKey(
+            rawValue: UIAccessibilitySpeechAttributeIPANotation
+        )
+        let attributedString = NSAttributedString(
+            string: "Hello iPhone", attributes: [key: "ˈa͡ɪ.ˈfo͡ʊn"]
+        )
+        
+        self.kaeruLabel.accessibilityAttributedLabel = attributedString
         
         // Do any additional setup after loading the view.
         if let str = data.imageUrl,let url = URL(string: str) {
