@@ -10,8 +10,30 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
-    
-    func setTwitCastingMovie(data:ShopItem){
-        
+    private var _data:ShopItem!
+    var data:ShopItem! {
+        set {
+            _data = newValue
+            if let str = newValue.imageUrl,let url = URL(string: str) {
+                
+                //        cell.isAccessibilityElement = true
+                
+                self.imageView.accessibilityLabel = data.title
+                
+                self.imageView.isAccessibilityElement = true
+                self.imageView.image = nil
+                
+                self.imageView.accessibilityTraits = UIAccessibilityTraitImage
+                let task = URLSession.shared.dataTask(with: url) { (data, resp, err) in
+                    DispatchQueue.main.async {
+                        self.imageView.image = UIImage(data: data!)
+                    }
+                }
+                task.resume()
+            }
+        }
+        get {
+            return _data
+        }
     }
 }

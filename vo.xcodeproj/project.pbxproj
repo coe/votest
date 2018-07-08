@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE739C5720BA3DC5005FE6DF /* btn_fav.png in Resources */ = {isa = PBXBuildFile; fileRef = CE739C5620BA3DC5005FE6DF /* btn_fav.png */; };
+		CE739C5920BA493E005FE6DF /* icon2569434.png in Resources */ = {isa = PBXBuildFile; fileRef = CE739C5820BA493E005FE6DF /* icon2569434.png */; };
 		CE9A910C20B172AA00491253 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A910B20B172AA00491253 /* CollectionViewCell.swift */; };
 		CEBD248320AFA886003B978E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD248220AFA886003B978E /* AppDelegate.swift */; };
 		CEBD248520AFA886003B978E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD248420AFA886003B978E /* ViewController.swift */; };
@@ -17,6 +19,14 @@
 		CEBD249B20AFA88E003B978E /* voTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD249A20AFA88E003B978E /* voTests.swift */; };
 		CEBD24A620AFA88E003B978E /* voUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD24A520AFA88E003B978E /* voUITests.swift */; };
 		CEBD24B420B06743003B978E /* ShopCollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD24B320B06743003B978E /* ShopCollectionCollectionViewController.swift */; };
+		CEBD2AD420F0B474005B9575 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD2AD320F0B474005B9575 /* TimelineTableViewController.swift */; };
+		CEBD2AD820F0B7AE005B9575 /* retweet.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBD2AD720F0B7AE005B9575 /* retweet.png */; };
+		CEBD2ADA20F0B7B4005B9575 /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBD2AD920F0B7B4005B9575 /* comment.png */; };
+		CEBD2ADC20F0B7F2005B9575 /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = CEBD2ADB20F0B7F2005B9575 /* fav.png */; };
+		CEF865F820F1AA430002E380 /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF865F620F1AA430002E380 /* TimelineTableViewCell.xib */; };
+		CEF865F920F1AA430002E380 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF865F720F1AA430002E380 /* TimelineTableViewCell.swift */; };
+		CEF8D99E20B93F8D00F74706 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8D99D20B93F8D00F74706 /* ItemViewController.swift */; };
+		CEF8D9A020B9888A00F74706 /* 0218_rd2_buy_8.png in Resources */ = {isa = PBXBuildFile; fileRef = CEF8D99F20B9888A00F74706 /* 0218_rd2_buy_8.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE739C5620BA3DC5005FE6DF /* btn_fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_fav.png; sourceTree = "<group>"; };
+		CE739C5820BA493E005FE6DF /* icon2569434.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2569434.png; sourceTree = "<group>"; };
 		CE9A910B20B172AA00491253 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		CEBD247F20AFA886003B978E /* vo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBD248220AFA886003B978E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +65,14 @@
 		CEBD24A520AFA88E003B978E /* voUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = voUITests.swift; sourceTree = "<group>"; };
 		CEBD24A720AFA88E003B978E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEBD24B320B06743003B978E /* ShopCollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionCollectionViewController.swift; sourceTree = "<group>"; };
+		CEBD2AD320F0B474005B9575 /* TimelineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
+		CEBD2AD720F0B7AE005B9575 /* retweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retweet.png; sourceTree = "<group>"; };
+		CEBD2AD920F0B7B4005B9575 /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment.png; sourceTree = "<group>"; };
+		CEBD2ADB20F0B7F2005B9575 /* fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav.png; sourceTree = "<group>"; };
+		CEF865F620F1AA430002E380 /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
+		CEF865F720F1AA430002E380 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
+		CEF8D99D20B93F8D00F74706 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		CEF8D99F20B9888A00F74706 /* 0218_rd2_buy_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0218_rd2_buy_8.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +131,13 @@
 		CEBD248120AFA886003B978E /* vo */ = {
 			isa = PBXGroup;
 			children = (
+				CEF865F520F1AA2F0002E380 /* TableViewCell */,
+				CEBD2ADB20F0B7F2005B9575 /* fav.png */,
+				CEBD2AD920F0B7B4005B9575 /* comment.png */,
+				CEBD2AD720F0B7AE005B9575 /* retweet.png */,
+				CE739C5820BA493E005FE6DF /* icon2569434.png */,
+				CE739C5620BA3DC5005FE6DF /* btn_fav.png */,
+				CEF8D99F20B9888A00F74706 /* 0218_rd2_buy_8.png */,
 				CEBD248220AFA886003B978E /* AppDelegate.swift */,
 				CEBD248420AFA886003B978E /* ViewController.swift */,
 				CEBD248620AFA886003B978E /* Main.storyboard */,
@@ -120,6 +147,8 @@
 				CEBD248920AFA886003B978E /* vo.xcdatamodeld */,
 				CEBD24B320B06743003B978E /* ShopCollectionCollectionViewController.swift */,
 				CE9A910B20B172AA00491253 /* CollectionViewCell.swift */,
+				CEF8D99D20B93F8D00F74706 /* ItemViewController.swift */,
+				CEBD2AD320F0B474005B9575 /* TimelineTableViewController.swift */,
 			);
 			path = vo;
 			sourceTree = "<group>";
@@ -140,6 +169,15 @@
 				CEBD24A720AFA88E003B978E /* Info.plist */,
 			);
 			path = voUITests;
+			sourceTree = "<group>";
+		};
+		CEF865F520F1AA2F0002E380 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEF865F720F1AA430002E380 /* TimelineTableViewCell.swift */,
+				CEF865F620F1AA430002E380 /* TimelineTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +286,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE739C5920BA493E005FE6DF /* icon2569434.png in Resources */,
+				CEBD2ADA20F0B7B4005B9575 /* comment.png in Resources */,
+				CEF865F820F1AA430002E380 /* TimelineTableViewCell.xib in Resources */,
 				CEBD249020AFA88E003B978E /* LaunchScreen.storyboard in Resources */,
+				CEF8D9A020B9888A00F74706 /* 0218_rd2_buy_8.png in Resources */,
+				CE739C5720BA3DC5005FE6DF /* btn_fav.png in Resources */,
+				CEBD2AD820F0B7AE005B9575 /* retweet.png in Resources */,
+				CEBD2ADC20F0B7F2005B9575 /* fav.png in Resources */,
 				CEBD248D20AFA88E003B978E /* Assets.xcassets in Resources */,
 				CEBD248820AFA886003B978E /* Main.storyboard in Resources */,
 			);
@@ -314,11 +359,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF865F920F1AA430002E380 /* TimelineTableViewCell.swift in Sources */,
 				CE9A910C20B172AA00491253 /* CollectionViewCell.swift in Sources */,
+				CEBD2AD420F0B474005B9575 /* TimelineTableViewController.swift in Sources */,
 				CEBD24B420B06743003B978E /* ShopCollectionCollectionViewController.swift in Sources */,
 				CEBD248520AFA886003B978E /* ViewController.swift in Sources */,
 				CEBD248B20AFA886003B978E /* vo.xcdatamodeld in Sources */,
 				CEBD248320AFA886003B978E /* AppDelegate.swift in Sources */,
+				CEF8D99E20B93F8D00F74706 /* ItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

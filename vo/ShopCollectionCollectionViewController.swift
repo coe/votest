@@ -144,15 +144,26 @@ class ShopCollectionCollectionViewController: UICollectionViewController,NSFetch
         // Dispose of any resources that can be recreated.
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("sender:\(sender)")
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "showItem":
+                let vc:ItemViewController = segue.destination as! ItemViewController
+                
+                let cell:CollectionViewCell = sender as! CollectionViewCell
+                vc.data = cell.data
+                break
+            default:
+                break
+            }
+        }
     }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -171,24 +182,7 @@ class ShopCollectionCollectionViewController: UICollectionViewController,NSFetch
         let data = fetchedResultsController.object(at: indexPath)
 
         // Configure the cell
-        if let str = data.imageUrl,let url = URL(string: str) {
-            
-            //        cell.isAccessibilityElement = true
-            
-            cell.imageView.accessibilityLabel = data.title
-            
-            cell.imageView.isAccessibilityElement = true
-            cell.imageView.image = nil
-            
-            cell.imageView.accessibilityTraits = UIAccessibilityTraitImage
-            let task = URLSession.shared.dataTask(with: url) { (data, resp, err) in
-                DispatchQueue.main.async {
-                    cell.imageView.image = UIImage(data: data!)
-                }
-            }
-            task.resume()
-        }
-
+        cell.data = data
     
         return cell
     }
