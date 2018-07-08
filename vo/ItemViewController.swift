@@ -28,9 +28,11 @@ class ItemViewController: UIViewController {
         let key = NSAttributedStringKey(
             rawValue: UIAccessibilitySpeechAttributeIPANotation
         )
-        let attributedString = NSAttributedString(
-            string: "Hello iPhone", attributes: [key: "ˈa͡ɪ.ˈfo͡ʊn"]
+        
+        let attributedString = NSMutableAttributedString(
+            string: "Hello iPhone"
         )
+        attributedString.addAttribute(key, value: "kɑ.e.ɾɯ.ɯ", range: NSRange(location: 6, length: 6))
         
         self.kaeruLabel.accessibilityAttributedLabel = attributedString
         
