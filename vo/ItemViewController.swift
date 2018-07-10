@@ -24,17 +24,20 @@ class ItemViewController: UIViewController {
         super.viewDidLoad()
         self.shopItemLabel.text = data.title
 //        let attributedString = NSMutableAttributedString(string: "Hello iPhone")
+
         
-        let key = NSAttributedStringKey(
-            rawValue: UIAccessibilitySpeechAttributeIPANotation
-        )
+        let attributedString = NSMutableAttributedString(string: "かえる")
+        if #available(iOS 11.0, *) {
+            attributedString.addAttribute(NSAttributedStringKey(rawValue: UIAccessibilitySpeechAttributeIPANotation), value: "kɑ.e.ɾɯ.ɯ", range: NSRange(location: 0, length: 3))
+        } else {
+            // Fallback on earlier versions
+        }
         
-        let attributedString = NSMutableAttributedString(
-            string: "Hello iPhone"
-        )
-        attributedString.addAttribute(key, value: "kɑ.e.ɾɯ.ɯ", range: NSRange(location: 6, length: 6))
-        
-        self.kaeruLabel.accessibilityAttributedLabel = attributedString
+        if #available(iOS 11.0, *) {
+            self.kaeruLabel.accessibilityAttributedLabel = attributedString
+        } else {
+            // Fallback on earlier versions
+        }
         
         // Do any additional setup after loading the view.
         if let str = data.imageUrl,let url = URL(string: str) {
